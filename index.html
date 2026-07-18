@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=2">                                        <!-- modositas -->
     <title>Test</title>
 </head>
 
@@ -13,6 +13,7 @@
        <div class="logo"> 
             <h1>bekemafla</h1>
        </div>
+
        <ul class="nav-links">
             <li>
                 <a href="index.html">Home</a>
@@ -27,6 +28,7 @@
                 <a href="index.html">Kapcsolat</a>
             </li>
        </ul> 
+
        <div class="burger">
             <div class="line1"></div>
             <div class="line2"></div>
@@ -34,33 +36,48 @@
        </div>
     </nav>
 
-    <div class="inner">
+    <!-- 1. OLDAL -->
+    <section class="oldal"></section>
+        <div class="inner">
             <div class="bemutatkozo">
                 <h1 class="bemutatkozo-szoveg">
-                    $ sudo apt install türelem  <br>
-                    Türelem csomag telepítve.   <br>
-                    Az oldal épül... becsült idő: "hamarosan"   <br>
+                    Sajnos még nincs itt semmi látnivaló.
                 </h1>
             </div>
-    </div>
-
-
-    <div class="sns-wrapper">
-        <ul>
-            <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
-            <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
-            <li><a href="https://www.instagram.com/bekemafla/" target="_blank">Instagram</a></li>
-        </ul>
-    </div>
-    <footer>
-        <div class="copyright" id="copyright">
-            <h4>
-                Copyright ©
-                <a href="https://bekemafla.hu/" target="_blank">bekemafla</a> 
-                All Rights Reserved.
-            </h4>
         </div>
-    </footer>
+    </section>
+
+    <!-- 2. OLDAL -->
+    <section class="oldal">
+        <div class="terminal-widget" id="terminalFrame">
+            <div class="terminal-widget__titlebar">
+                <div class="terminal-widget__dot terminal-widget__dot--red"></div>
+                <div class="terminal-widget__dot terminal-widget__dot--yellow"></div>
+                <div class="terminal-widget__dot terminal-widget__dot--green"></div>
+                <span>1mafla@bekemaflaserver: ~</span>
+            </div>
+
+            <div class="terminal-widget__body"><span id="terminalText"></span><span class="terminal-widget__cursor"></span></div>
+        </div>
+
+        <div class="sns-wrapper">
+            <ul>
+                <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+                <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+                <li><a href="https://www.instagram.com/bekemafla/" target="_blank">Instagram</a></li>
+            </ul>
+        </div>
+
+        <footer>
+            <div class="copyright" id="copyright">
+                <h4>
+                    Copyright ©
+                    <a href="https://bekemafla.hu/" target="_blank">bekemafla</a> 
+                    All Rights Reserved.
+                </h4>
+            </div>
+        </footer>
+    </section>
 
     <script src="app.js"></script>
 </body>

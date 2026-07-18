@@ -1,3 +1,24 @@
+/* --- Scroll snap alap --- */
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+.oldal:first-child {
+  padding-top: 8vh; 
+}
+
+.oldal {
+  height: 25vh;   
+  height: 25dvh;  
+  scroll-snap-align: start;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+
 /* NAV */
 *{
     margin: 0px;
@@ -140,22 +161,132 @@ nav {
     height: 100%;
 }
 
-/* responsive */
-@media only screen and (max-width: 300px){
-    .prev, .next, .text{
-        font-size: 11px;
-    }
-    .dot{
-        height: 10px;
-        width: 10px;
-    }
+/* SNS-wrapper */
 
-    .slideshow-wrapper {
-        padding-top: 12vh; /* A navigációs sáv magassága */
-    }
+.sns-wrapper {
+    background-color: rgba(15, 16, 22, 0.9); /* Az RGBA színformátummal állítható az átlátszóság */
+    background-size: cover; 
+    padding: 6vh;
+    display: grid;
+    place-items: center;
+    color: #ffffff; /* Betűszín */
+    margin-top: 5vh;
 }
 
-@media only screen and (max-width: 500px){
+.sns-wrapper ul {
+    list-style-type: none;
+    display: flex;
+    padding: 0; 
+    margin: 0; 
+}
+
+.sns-wrapper li {
+    margin: 0 10px;
+}
+
+.sns-wrapper a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.sns-wrapper a:hover {
+    color: #0073e6;
+}
+    
+/* Footer copyright */
+footer {
+    padding: 8vh; 
+    text-align: center;
+    background-size: cover; 
+    color: #ffffff; 
+}
+
+/*
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 20px auto;
+}
+*/
+
+/* */
+body{
+    background-image: url('background.png');
+    background-size: cover;
+    color: #ffffff;
+    background-position: center;
+    padding-top: 0vh;
+    margin: 0;
+}
+
+/* Terminal */
+
+.terminal-widget {
+    max-width: 700px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #232935;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+ 
+.terminal-widget__titlebar {
+    background: #161b22;
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+ 
+.terminal-widget__dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+ 
+.terminal-widget__dot--red { background: #ff5f57; }
+.terminal-widget__dot--yellow { background: #febc2e; }
+.terminal-widget__dot--green { background: #28c840; }
+ 
+.terminal-widget__titlebar span {
+    margin-left: 10px;
+    color: #7a8494;
+    font-family: 'Consolas', monospace;
+    font-size: 13px;
+}
+ 
+.terminal-widget__body {
+    background: #000000;
+    padding: 24px;
+    min-height: 360px;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #39d67a;
+    white-space: pre-wrap;
+}
+ 
+.terminal-widget__cursor {
+    display: inline-block;
+    width: 9px;
+    height: 16px;
+    background: #39d67a;
+    margin-left: 2px;
+    vertical-align: middle;
+    animation: terminal-blink 1s step-end infinite;
+}
+ 
+@keyframes terminal-blink {
+    50% { opacity: 0; }
+}
+
+/* responsive inner */ 
+@media screen and (max-width: 480px) {
+    /* Mobile */
+
     .prev, .next, .text{
         font-size: 14px;
     }
@@ -163,11 +294,7 @@ nav {
     .slideshow-wrapper {
         padding-top: 10vh; /* A navigációs sáv magassága */
     }
-}
 
-/* inner */ 
-@media screen and (max-width: 480px) {
-    /* Mobile */
     .inner{
         padding-top: 8vh;
         padding-bottom: 50vh;
@@ -176,7 +303,7 @@ nav {
 
     .bemutatkozo{
         text-align: middle;
-        padding: 3vh;
+        padding: 10vh;
         background-color: rgba(15, 16, 22, 0.8);
         margin: 5vh;
     }
@@ -211,8 +338,7 @@ nav {
     }
 }
 
-
-  @media screen and (min-width: 481px) and (max-width: 768px) {
+@media screen and (min-width: 481px) and (max-width: 768px) {
     /* Tabletek */
 
     .inner{
@@ -258,8 +384,7 @@ nav {
     }
 }
 
-
-  @media screen and (min-width: 769px) and (max-width: 1149px) {
+@media screen and (min-width: 769px) and (max-width: 1149px) {
     /* Laptop, Tablet */
 
     .inner{
@@ -305,7 +430,7 @@ nav {
     }
 }
   
-    @media screen and (min-width: 1150px) and (max-width: 1500px) {
+@media screen and (min-width: 1150px) and (max-width: 1500px) {
     /* PC */
     .inner{
         padding-top: 8vh;
@@ -397,65 +522,4 @@ nav {
     }
 }
 
-/* SNS-wrapper */
-
-.sns-wrapper {
-    background-color: rgba(15, 16, 22, 0.9); /* Az RGBA színformátummal állítható az átlátszóság */
-    background-size: cover; 
-    padding: 6vh;
-    display: grid;
-    place-items: center;
-    color: #ffffff; /* Betűszín */
-}
-
-.sns-wrapper ul {
-    list-style-type: none;
-    display: flex;
-    padding: 0; 
-    margin: 0; 
-}
-
-.sns-wrapper li {
-    margin: 0 10px;
-}
-
-.sns-wrapper a {
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 18px;
-    transition: color 0.3s;
-}
-
-.sns-wrapper a:hover {
-    color: #0073e6;
-}
-    
-/* Footer copyright */
-footer {
-    padding: 8vh; 
-    text-align: center;
-    background-size: cover; 
-    color: #ffffff; 
-}
-
-/*
-.container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin: 20px auto;
-}
-*/
-
-
-
-
-
-/* */
-body{
-    background-image: url('background.png');
-    background-size: cover;
-    color: #ffffff;
-    background-position: center;
-}
 

@@ -22,3 +22,44 @@ const navSlide = () => {
 }
 
 navSlide();
+
+(function () {
+  const lines = [
+    "1mafla@bekemaflaserver:~$ whoami",
+    "1mafla AKA Beke Zsolt - rendszergazda",
+    "",
+    "1mafla@bekemaflaserver:~$ status",
+    "bekemafla.hu — saját mini PC-ről üzemeltetve",
+    "",
+    "$ sudo apt install türelem",
+    "Türelem csomag telepítve.",
+    "Az oldal épül... becsült idő: hamarosan"
+  ];
+ 
+  const target = document.getElementById('terminalText');
+  let started = false;
+ 
+  function typeWriter(lineIndex = 0, charIndex = 0) {
+    if (lineIndex >= lines.length) return;
+    const currentLine = lines[lineIndex];
+ 
+    if (charIndex < currentLine.length) {
+      target.textContent += currentLine[charIndex];
+      setTimeout(() => typeWriter(lineIndex, charIndex + 1), 35);
+    } else {
+      target.textContent += "\n";
+      setTimeout(() => typeWriter(lineIndex + 1, 0), 300);
+    }
+  }
+ 
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !started) {
+        started = true;
+        typeWriter();
+      }
+    });
+  }, { threshold: 0.4 });
+ 
+  observer.observe(document.getElementById('terminalFrame'));
+})();
