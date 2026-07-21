@@ -25,13 +25,13 @@ navSlide();
 
 (function () {
   const lines = [
-    "1mafla@bekemaflaserver:~$ whoami",
-    "1mafla AKA Beke Zsolt - rendszergazda",
+    "1mafla@server:~$ whoami",
+    "Üdvözöllek a weboldalamon! Beke Zsolt vagyok!",
     "",
-    "1mafla@bekemaflaserver:~$ status",
-    "bekemafla.hu — saját mini PC-ről üzemeltetve",
+    "1mafla@server:~$ coffee",
+    "Error: A kávégép elromlott! Kérlek nézz vissza később!",
     "",
-    "$ sudo apt install türelem",
+    "1mafla@server:~$ sudo apt install türelem",
     "Türelem csomag telepítve.",
     "Az oldal épül... becsült idő: hamarosan"
   ];

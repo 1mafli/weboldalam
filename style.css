@@ -295,23 +295,6 @@ body{
         padding-top: 10vh; /* A navigációs sáv magassága */
     }
 
-    .inner{
-        padding-top: 8vh;
-        padding-bottom: 50vh;
-        text-align: center;
-    }
-
-    .bemutatkozo{
-        text-align: middle;
-        padding: 10vh;
-        background-color: rgba(15, 16, 22, 0.8);
-        margin: 5vh;
-    }
-
-    .bemutatkozo-szoveg{
-        font-size: small;
-    }
-
     .top-row, .bottom-row {
         flex-direction: column;  /*Kép és szöveg egymás alatt lesz kisebb képernyőkön */
         display: flex;
